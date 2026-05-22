@@ -1,0 +1,7 @@
+{
+  "name": "mellow-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

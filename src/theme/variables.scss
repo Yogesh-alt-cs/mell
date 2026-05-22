@@ -1,0 +1,91 @@
+// ═══════════════════════════════════════════════════════════
+//  Mellow Quiz — Design Tokens (Ionic Angular)
+//  Exact port of the React/TailwindCSS styles.css
+// ═══════════════════════════════════════════════════════════
+
+// Outfit font from Fontshare CDN
+@import url('https://api.fontshare.com/v2/css?f[]=outfit@300,400,500,600,700&display=swap');
+
+// ── Mellow Palette CSS Custom Properties ──────────────────
+:root {
+  // Radius scale
+  --mellow-radius-base: 1.25rem;
+  --mellow-radius-sm:   calc(var(--mellow-radius-base) - 4px);
+  --mellow-radius-md:   calc(var(--mellow-radius-base) - 2px);
+  --mellow-radius-lg:   var(--mellow-radius-base);
+  --mellow-radius-xl:   calc(var(--mellow-radius-base) + 4px);
+  --mellow-radius-2xl:  calc(var(--mellow-radius-base) + 8px);
+  --mellow-radius-3xl:  calc(var(--mellow-radius-base) + 12px);
+  --mellow-radius-4xl:  calc(var(--mellow-radius-base) + 16px);
+
+  // Shadows
+  --shadow-soft:    0 10px 30px -10px rgba(74, 68, 61, 0.08);
+  --shadow-soft-lg: 0 20px 50px -20px rgba(74, 68, 61, 0.15);
+  --shadow-nav:     0 -4px 20px -10px rgba(0, 0, 0, 0.05);
+
+  // Light palette  (matches React oklch values exactly)
+  --background:             #F8F4E9;   // oklch(0.972 0.018 85)
+  --surface:                #FFFFFF;
+  --foreground:             #4A443D;   // oklch(0.36 0.02 60)
+  --primary:                #F6DBC0;   // oklch(0.89 0.05 75)
+  --primary-foreground:     #4A443D;
+  --secondary:              #E8D3BA;   // oklch(0.86 0.045 70)
+  --secondary-foreground:   #4A443D;
+  --muted:                  #F1EDE4;
+  --muted-foreground:       #7A746D;
+  --accent:                 #E8D3BA;
+  --accent-foreground:      #4A443D;
+  --destructive:            #C0524A;
+  --destructive-foreground: #FFFFFF;
+  --success:                #A7F3D0;   // oklch(0.88 0.10 160)
+  --warning:                #FDE2E2;   // oklch(0.92 0.04 25)
+  --border:                 #E8E2D8;
+  --input:                  #E8E2D8;
+  --ring:                   #C8B8A0;
+  --card:                   #FFFFFF;
+  --card-foreground:        #4A443D;
+
+  // Ionic variable overrides — map Ionic tokens to Mellow palette
+  --ion-background-color:           var(--background);
+  --ion-background-color-rgb:       248, 244, 233;
+  --ion-text-color:                 var(--foreground);
+  --ion-text-color-rgb:             74, 68, 61;
+  --ion-color-primary:              var(--primary);
+  --ion-color-primary-rgb:          246, 219, 192;
+  --ion-color-primary-contrast:     var(--foreground);
+  --ion-color-primary-shade:        var(--secondary);
+  --ion-color-primary-tint:         #FAE8D5;
+  --ion-color-secondary:            var(--secondary);
+  --ion-color-success:              var(--success);
+  --ion-color-warning:              var(--warning);
+  --ion-color-danger:               var(--destructive);
+  --ion-font-family:                'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --ion-toolbar-background:         transparent;
+  --ion-tab-bar-background:         transparent;
+  --ion-tab-bar-border-color:       transparent;
+  --ion-safe-area-bottom:           env(safe-area-inset-bottom, 0px);
+  --ion-item-background:            transparent;
+  --ion-card-background:            var(--surface);
+}
+
+// ── Dark Mode ──────────────────────────────────────────────
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background:            #332D27;  // oklch(0.22 0.01 60)
+    --foreground:            #F5F1EA;
+    --surface:               #3E3730;
+    --card:                  #3E3730;
+    --card-foreground:       #F5F1EA;
+    --secondary:             #4A4035;
+    --secondary-foreground:  #F5F1EA;
+    --muted:                 #4A4035;
+    --muted-foreground:      #A89F95;
+    --border:                rgba(255,255,255,0.1);
+    --input:                 rgba(255,255,255,0.15);
+    --ion-background-color:  #332D27;
+    --ion-background-color-rgb: 51, 45, 39;
+    --ion-text-color:        #F5F1EA;
+    --ion-text-color-rgb:    245, 241, 234;
+    --ion-card-background:   #3E3730;
+  }
+}

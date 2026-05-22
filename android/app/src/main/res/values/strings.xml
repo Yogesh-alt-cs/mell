@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Mellow Quiz</string>
+    <string name="title_activity_main">Mellow Quiz</string>
+    <string name="package_name">com.mellowquiz.app</string>
+    <string name="custom_url_scheme">com.mellowquiz.app</string>
+</resources>
